@@ -451,6 +451,17 @@
                         return false;
                     }
                 }
+                else if (checked_spellName == "utsusemi: san")
+                {
+                    if (_ELITEAPIPL.Player.MainJob == 13 && _ELITEAPIPL.Player.MainJobLevel == 99 && JobPoints.SpentJobPoints >= 100) // IF MAIN JOB IS NIN, AND JOB LEVEL IS AT MAX WITH REQUIRED JOB POINTS
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
                 else
                 {
                     return false;
@@ -6050,7 +6061,11 @@
                         }
                         else if ((Form2.config.plUtsusemi) && (BuffChecker(444, 0) != true && BuffChecker(445, 0) != true && BuffChecker(446, 0) != true))
                         {
-                            if (CheckSpellRecast("Utsusemi: Ni") == 0 && HasSpell("Utsusemi: Ni") && JobChecker("Utsusemi: Ni") == true && GetInventoryItemCount(_ELITEAPIPL, GetItemId("Shihei")) > 0)
+                            if (CheckSpellRecast("Utsusemi: San") == 0 && JobChecker("Utsusemi: San") == true && GetInventoryItemCount(_ELITEAPIPL, GetItemId("Shihei")) > 0)
+                            {
+                                CastSpell("<me>", "Utsusemi: San");
+                            }
+                            else if (CheckSpellRecast("Utsusemi: Ni") == 0 && HasSpell("Utsusemi: Ni") && JobChecker("Utsusemi: Ni") == true && GetInventoryItemCount(_ELITEAPIPL, GetItemId("Shihei")) > 0)
                             {
                                 CastSpell("<me>", "Utsusemi: Ni");
                             }
