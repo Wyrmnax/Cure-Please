@@ -5993,7 +5993,6 @@
                     {
                         if ((Form2.config.Composure) && (!plStatusCheck(StatusEffect.Composure)) && (GetAbilityRecast("Composure") == 0) && (HasAbility("Composure")))
                         {
-
                             JobAbility_Wait("Composure", "Composure");
                         }
                         else if ((Form2.config.LightArts) && (!plStatusCheck(StatusEffect.Light_Arts)) && (!plStatusCheck(StatusEffect.Addendum_White)) && (GetAbilityRecast("Light Arts") == 0) && (HasAbility("Light Arts")))
@@ -6011,6 +6010,10 @@
                         else if ((Form2.config.AddendumBlack) && (plStatusCheck(StatusEffect.Dark_Arts)) && (!plStatusCheck(StatusEffect.Addendum_Black)) && (GetAbilityRecast("Stratagems") == 0) && (HasAbility("Stratagems")))
                         {
                             JobAbility_Wait("Addendum: Black", "Addendum: Black");
+                        }
+                        else if ((Form2.config.Innin) && (plStatusCheck(StatusEffect.Innin)) && (!plStatusCheck(StatusEffect.Innin)))
+                        {
+                            JobAbility_Wait("Innin", "Innin");
                         }
                         else if ((Form2.config.plReraise) && (Form2.config.EnlightenmentReraise) && (!plStatusCheck(StatusEffect.Reraise)) && _ELITEAPIPL.Player.MainJob == 20 && !BuffChecker(401, 0) && HasAbility("Enlightenment"))
                         {

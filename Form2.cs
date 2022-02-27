@@ -1652,6 +1652,20 @@
                 get; set;
             }
 
+            //NIN
+            public bool Innin
+            {
+                get; set;
+            }
+            public bool Yonin
+            {
+                get; set;
+            }
+            public bool Issekigan
+            {
+                get; set;
+            }
+
             //AUTO CASTING SPELLS OPTIONS
             public bool autoTarget
             {
@@ -2105,6 +2119,9 @@
                 config.DivineCaress = false;
                 config.DarkArts = false;
                 config.AddendumBlack = false;
+                config.Innin = false;
+                config.Yonin = false;
+                config.Issekigan = false;
 
                 // DEBUFF REMOVAL
                 config.plSilenceItemEnabled = false;
@@ -2618,6 +2635,10 @@
             config.Troubadour = troubadour.Checked;
             config.Nightingale = nightingale.Checked;
             config.Marcato = marcato.Checked;
+
+            config.Innin = InninBox.Checked;
+            config.Yonin = YoninBox.Checked;
+            config.Issekigan = IssekiganBox.Checked;
 
             // DEBUFF REMOVAL
             config.plSilenceItemEnabled = plSilenceItemEnabled.Checked;
@@ -3689,6 +3710,10 @@
             troubadour.Checked = config.Troubadour;
             nightingale.Checked = config.Nightingale;
             marcato.Checked = config.Marcato;
+
+            InninBox.Checked = config.Innin;
+            YoninBox.Checked = config.Yonin;
+            IssekiganBox.Checked = config.Issekigan;
 
             //DEBUFF REMOVAL
             plSilenceItemEnabled.Checked = config.plSilenceItemEnabled;

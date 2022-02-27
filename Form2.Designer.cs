@@ -115,6 +115,9 @@
             this.ipAddress = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
             this.FFXIDefaultAutoFollow = new System.Windows.Forms.CheckBox();
+            this.YoninBox = new System.Windows.Forms.CheckBox();
+            this.IssekiganBox = new System.Windows.Forms.CheckBox();
+            this.InninBox = new System.Windows.Forms.CheckBox();
             this.saveAsButton = new System.Windows.Forms.Button();
             this.loadButton = new System.Windows.Forms.Button();
             this.loadJobSettings = new System.Windows.Forms.CheckBox();
@@ -181,6 +184,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.mpMinCastValue = new System.Windows.Forms.NumericUpDown();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBoxEx2 = new CurePlease.GroupBoxEx();
             this.groupBox24 = new CurePlease.GroupBoxEx();
             this.troubadour = new System.Windows.Forms.CheckBox();
             this.nightingale = new System.Windows.Forms.CheckBox();
@@ -598,6 +602,7 @@
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mpMinCastValue)).BeginInit();
             this.tabPage3.SuspendLayout();
+            this.groupBoxEx2.SuspendLayout();
             this.groupBox24.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.rdmJAgroup.SuspendLayout();
@@ -1658,6 +1663,40 @@
         " yalms and no action is being performed.");
             this.FFXIDefaultAutoFollow.UseVisualStyleBackColor = true;
             // 
+            // YoninBox
+            // 
+            this.YoninBox.AutoSize = true;
+            this.YoninBox.Location = new System.Drawing.Point(20, 48);
+            this.YoninBox.Name = "YoninBox";
+            this.YoninBox.Size = new System.Drawing.Size(57, 19);
+            this.YoninBox.TabIndex = 5;
+            this.YoninBox.Text = "Yonin";
+            this.toolTip1.SetToolTip(this.YoninBox, "When Luopan is 6.8 yalms further than the Monitored player it will wait 3 seconds" +
+        " then Full Circle the GEO spell.");
+            this.YoninBox.UseVisualStyleBackColor = true;
+            // 
+            // IssekiganBox
+            // 
+            this.IssekiganBox.AutoSize = true;
+            this.IssekiganBox.Location = new System.Drawing.Point(20, 73);
+            this.IssekiganBox.Name = "IssekiganBox";
+            this.IssekiganBox.Size = new System.Drawing.Size(78, 19);
+            this.IssekiganBox.TabIndex = 4;
+            this.IssekiganBox.Text = "Issekigan";
+            this.toolTip1.SetToolTip(this.IssekiganBox, "Used only when the GEO spell is monster targeted");
+            this.IssekiganBox.UseVisualStyleBackColor = true;
+            // 
+            // InninBox
+            // 
+            this.InninBox.AutoSize = true;
+            this.InninBox.Location = new System.Drawing.Point(20, 23);
+            this.InninBox.Name = "InninBox";
+            this.InninBox.Size = new System.Drawing.Size(53, 19);
+            this.InninBox.TabIndex = 3;
+            this.InninBox.Text = "Innin";
+            this.toolTip1.SetToolTip(this.InninBox, "Set the spell and target to use on the Geomancy page.");
+            this.InninBox.UseVisualStyleBackColor = true;
+            // 
             // saveAsButton
             // 
             this.saveAsButton.Location = new System.Drawing.Point(580, 597);
@@ -2430,6 +2469,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.groupBoxEx2);
             this.tabPage3.Controls.Add(this.groupBox24);
             this.tabPage3.Controls.Add(this.groupBox8);
             this.tabPage3.Controls.Add(this.rdmJAgroup);
@@ -2442,6 +2482,20 @@
             this.tabPage3.Text = "Job Abilities";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // groupBoxEx2
+            // 
+            this.groupBoxEx2.BorderColor = System.Drawing.Color.SlateGray;
+            this.groupBoxEx2.Controls.Add(this.YoninBox);
+            this.groupBoxEx2.Controls.Add(this.IssekiganBox);
+            this.groupBoxEx2.Controls.Add(this.InninBox);
+            this.groupBoxEx2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxEx2.Location = new System.Drawing.Point(600, 284);
+            this.groupBoxEx2.Name = "groupBoxEx2";
+            this.groupBoxEx2.Size = new System.Drawing.Size(200, 270);
+            this.groupBoxEx2.TabIndex = 8;
+            this.groupBoxEx2.TabStop = false;
+            this.groupBoxEx2.Text = "Ninja";
+            // 
             // groupBox24
             // 
             this.groupBox24.BorderColor = System.Drawing.Color.SlateGray;
@@ -2452,7 +2506,7 @@
             this.groupBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox24.Location = new System.Drawing.Point(600, 5);
             this.groupBox24.Name = "groupBox24";
-            this.groupBox24.Size = new System.Drawing.Size(201, 549);
+            this.groupBox24.Size = new System.Drawing.Size(201, 273);
             this.groupBox24.TabIndex = 3;
             this.groupBox24.TabStop = false;
             this.groupBox24.Text = "Bard";
@@ -8139,6 +8193,8 @@
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mpMinCastValue)).EndInit();
             this.tabPage3.ResumeLayout(false);
+            this.groupBoxEx2.ResumeLayout(false);
+            this.groupBoxEx2.PerformLayout();
             this.groupBox24.ResumeLayout(false);
             this.groupBox24.PerformLayout();
             this.groupBox8.ResumeLayout(false);
@@ -8321,6 +8377,9 @@
         private System.Windows.Forms.NumericUpDown mpMinCastValue;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.CheckBox marcato;
+        private System.Windows.Forms.CheckBox Innin;
+        private System.Windows.Forms.CheckBox Yonin;
+        private System.Windows.Forms.CheckBox Issekigan;
         private System.Windows.Forms.CheckBox troubadour;
         private System.Windows.Forms.CheckBox nightingale;
         private System.Windows.Forms.CheckBox pianissimo;
@@ -8768,5 +8827,9 @@
         private System.Windows.Forms.CheckBox plAmnesia;
         private System.Windows.Forms.ComboBox plSpikes_Spell;
         private System.Windows.Forms.CheckBox plSpikes;
+        private GroupBoxEx groupBoxEx2;
+        private System.Windows.Forms.CheckBox YoninBox;
+        private System.Windows.Forms.CheckBox IssekiganBox;
+        private System.Windows.Forms.CheckBox InninBox;
     }
 }
